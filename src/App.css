@@ -20,8 +20,11 @@ justify-content: space-between;
 .cart{
   width: 100px;
 }
-.search{
+.filter{
   margin: 10px 0;
+}
+.filter-btn{
+  cursor: pointer;
 }
 .res-container{
   display: flex;
