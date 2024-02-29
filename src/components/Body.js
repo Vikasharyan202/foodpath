@@ -9,7 +9,7 @@ const Body = () => {
 
   // Local state variable - super powerful variable
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
-  const [searchedRestaturant, setSearchedRestaturant] = useState([]);
+  const [searchedRestaurant, setSearchedRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
   
 
@@ -25,7 +25,7 @@ const Body = () => {
     console.log(json);
     setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     
-    setSearchedRestaturant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setSearchedRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
 
   // Note:  shimmer component didn't work properly, check again their implementation
@@ -48,7 +48,7 @@ const Body = () => {
               )     
             })
             console.log(listOfRestaurants)
-            setSearchedRestaturant(searchedRestaturant);
+            setSearchedRestaurant(searchedRestaturant);
           }}>Search</button>
 
           <div className="filter">
@@ -62,7 +62,7 @@ const Body = () => {
       
       <div className='res-container'>
         {
-          searchedRestaturant.map(restaurant => <RestaurantCard key={restaurant.info.id} resData={restaurant}/>)
+          searchedRestaurant.map(restaurant => <RestaurantCard key={restaurant.info.id} resData={restaurant}/>)
         }
         
       </div>

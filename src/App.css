@@ -52,12 +52,14 @@ justify-content: space-between;
   justify-content: center;
   flex-wrap: wrap;
   gap: 5px;
+  margin-top: 60px;
 }
 .shimmer-card{
   width: 200px;
   height:300px;
   padding: 5px;
   border: 1px solid black;
+  border-radius: 4px;
   background-color: #fff;
 }
 .btn{
@@ -65,4 +67,13 @@ justify-content: space-between;
   height: 30px;
   margin-right: 10px;
   cursor: pointer;
+}
+.about{
+  text-align: center;
+}
+.contact{
+  text-align: center;
+}
+.cart{
+  text-align: center;
 }
