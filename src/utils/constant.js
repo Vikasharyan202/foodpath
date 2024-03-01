@@ -3,3 +3,5 @@ export const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_l
 export const LOGO_URL = "https://media.istockphoto.com/id/1156053620/vector/restaurant-logo.jpg?s=612x612&w=0&k=20&c=dC6ICQsgBuhi8-MG0bjtHVn7Scm0rFPVnQ-_ygRTmRY=";
 
 export const CART_URL = "https://static.vecteezy.com/system/resources/thumbnails/000/538/499/small/shopping_cart-01.jpg";
+
+export const MENU_API = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=";
