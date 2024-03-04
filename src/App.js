@@ -8,6 +8,8 @@ import Contact from './components/Contact';
 import Cart from './components/Cart';
 import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
+import {lazy, Suspense} from "react";
+// import Grocery from './components/Grocery';
 
 
 
@@ -19,6 +21,9 @@ import RestaurantMenu from './components/RestaurantMenu';
     </div>
   )
 }
+
+// load the about page when we will need
+const Grocery = lazy(() => import("./components/Grocery"))
 
 export const appRouter = createBrowserRouter([
   {
@@ -36,6 +41,10 @@ export const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact/>,
+      },
+      {
+        path: "/grocery",
+        element: <Suspense fallback={<h1>Page Loading.............</h1>} ><Grocery/></Suspense>
       },
       {
         path: "/cart",

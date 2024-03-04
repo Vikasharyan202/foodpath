@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import resList from "../utils/mockData";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 
 const Body = () => {
@@ -27,6 +27,13 @@ const Body = () => {
     setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     
     setSearchedRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+  }
+
+  const onlineStatus = useOnlineStatus();
+  if(onlineStatus === false){
+    return(
+      <h1>Looks like you're offline!! Please check your internet connection.......</h1>
+    )
   }
 
   // Note:  shimmer component didn't work properly, check again their implementation
