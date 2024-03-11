@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {withPromotedLabel} from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import resList from "../utils/mockData";
 import Shimmer from "./Shimmer";
@@ -12,6 +12,8 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [searchedRestaurant, setSearchedRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
+
+  const PromotedRestaurnat = withPromotedLabel(RestaurantCard);
   
 
   useEffect(() => {
@@ -70,7 +72,8 @@ const Body = () => {
       
       <div className='res-container'>
         {
-          searchedRestaurant.map(restaurant => <Link key={restaurant.info.id} to={"/restaurantMenu/"+restaurant.info.id}><RestaurantCard  resData={restaurant}/></Link>)
+          searchedRestaurant.map(restaurant => <Link key={restaurant.info.id} to={"/restaurantMenu/"+restaurant.info.id}>{restaurant.info.promoted === true
+          ? <PromotedRestaurnat resData={restaurant} /> : <RestaurantCard  resData={restaurant}/>}</Link>)
         }
         
       </div>
