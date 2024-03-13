@@ -9,16 +9,20 @@ import Cart from './components/Cart';
 import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
 import {lazy, Suspense} from "react";
+import { Provider } from 'react-redux';
+import appStore from './utils/appStore';
 // import Grocery from './components/Grocery';
 
 
 
  const App = () => {
   return(
-    <div className='app'>
+    <Provider store={appStore}>
+      <div className='app'>
       <Header/>
       <Outlet/>
-    </div>
+      </div>
+    </Provider>
   )
 }
 

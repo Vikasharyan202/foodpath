@@ -75,6 +75,21 @@ justify-content: space-between;
   text-align: center;
 }
 .cart{
+  display: flex;
+  position: relative;
+}
+.cart-image{
+  width: 100px;
+  
+}
+.cart-text{
+  position: absolute;
+  left: 40px;
+  top: -20px;
+  font-size: 40px;
+  font-weight: 600;
+}
+.cart-page{
   text-align: center;
 }
 .resMenu{
